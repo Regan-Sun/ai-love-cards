@@ -28,6 +28,9 @@ jobs:
 
       - name: 配置 Pages
         uses: actions/configure-pages@v5
+        with:
+          # 私有仓库的 Pages 默认未启用，enablement: true 让本步骤自动开启
+          enablement: true
 
       - name: 上传静态站点产物
         # 仓库根目录即站点根目录：index.html + assets/
